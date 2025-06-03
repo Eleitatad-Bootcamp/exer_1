@@ -1,6 +1,31 @@
 <mvc:View controllerName="com.acn.training.exer1tatad.controller.MainView"
+    xmlns:form="sap.ui.layout.form" 
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    </Page>
+<Page id="page" title="">
+<content><form:SimpleForm id="surveyForm" maxContainerCols="2" layout="ResponsiveGridLayout" title="Survey Form" labelSpanL="4" emptySpanL="4" columnsL="1" adjustLabelSpan="false">
+<form:content>
+<Label text="Name" id="nameLabel"/> 
+<Input id="nameInput"/> 
+<Label text="Street/No" id="streetLabel"/> 
+<Input id="streetInput"/><Input id="streetNoInput"/>
+<Label text="Zip Code/City" id="cityLabel"/> 
+<Input id="zipCodeInput"/> <Input id="cityInput"/> 
+    <Label text="Country" width="100%" id="CountrySelection"/>
+<ComboBox xmlns="sap.m" id="box0">
+    <items>
+        <core:Item xmlns:core="sap.ui.core" key="item-1-key" text="England" id="item0"/>
+        <core:Item xmlns:core="sap.ui.core" key="item-2-key" text="Germany" id="item1"/>
+        <core:Item xmlns:core="sap.ui.core" key="item-3-key" text="USA" id="item2"/>
+        <core:Item xmlns:core="sap.ui.core" key="item-4-key" text="Philippines" id="item3"/>
+        </items>
+</ComboBox>
+</form:content>
+</form:SimpleForm>
+<FlexBox id ="surveyButtons" justifyContent="Center">
+<Button xmlns="sap.m" text="Save" id="button1" />
+<Button xmlns="sap.m" text="Clear" id="button2" press=".onClearPress"/>
+</FlexBox>
+</content> 
+</Page>
 </mvc:View>
