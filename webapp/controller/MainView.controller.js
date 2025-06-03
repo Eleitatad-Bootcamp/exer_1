@@ -11,7 +11,8 @@ sap.ui.define([
             this.byId("nameInput").setValue("");
             this.byId("streetInput").setValue("");
             this.byId("cityInput").setValue("");
-        
+            this.byId("zipCodeInput").setValue("");
+            this.byId("streetNoInput").setValue("");
             // Clear ComboBox selection
             this.byId("box0").setSelectedKey(null);
         }
